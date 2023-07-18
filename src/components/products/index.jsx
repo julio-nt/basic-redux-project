@@ -9,8 +9,8 @@ import * as Styles from "./styles";
 const Products = () => {
   return (
     <Styles.Container>
-      {products.map((product) => (
-        <ProductItem product={product} />
+      {products.map((product, i) => (
+        <ProductItem product={product} key={i} />
       ))}
     </Styles.Container>
   );

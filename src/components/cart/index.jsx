@@ -19,8 +19,8 @@ const Cart = ({ isVisible, setIsVisible }) => {
       <Styles.CartEscapeArea onClick={handleEscapeAreaClick} />
       <Styles.CartContent>
         <Styles.CartTitle>Seu Carrinho</Styles.CartTitle>
-        {products.map(product => {
-          return <CartItem product={product} />
+        {products.map((product, i) => {
+          return <CartItem product={product} key={i} />
         })}
         <Styles.CartTotal>Total: R${totalPrice}</Styles.CartTotal>
       </Styles.CartContent>
